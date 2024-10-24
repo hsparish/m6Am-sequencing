@@ -1,4 +1,4 @@
-Data Analysis workflow:
+##Data Analysis workflow:
 
 (1) Use cutadapt to remove 3' end DNA adaptor
 
