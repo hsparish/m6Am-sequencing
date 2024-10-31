@@ -39,6 +39,6 @@
 
 (1) Get m6Am stoichiometry info (and percentages in cap1 vs. cap2) with Data_analysis_m6A_m6Am_stoichiometry script
 
-(2) Get global percent methylation at each site relative to the TSN with Global_Percent)Methylation_by_pos script
+(2) Get global percent methylation at each site relative to the TSN with Global_Percent_Methylation_by_pos script
 
 (3) Annotate m6A sites (and get info about proximity to TSN) with m6A_sites_annotation script
