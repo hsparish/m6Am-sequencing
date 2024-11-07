@@ -46,4 +46,5 @@
 ## Important Functions
 
 (1) Function to return base at reference given chromosome and position
+
 (2) Function to separate reads based on gene (assuming TSS data contains this info stored in array)
