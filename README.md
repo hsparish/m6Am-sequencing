@@ -42,3 +42,8 @@
 (2) Get global percent methylation at each site relative to the TSN with Global_Percent_Methylation_by_pos script
 
 (3) Annotate m6A sites (and get info about proximity to TSN) with m6A_sites_annotation script
+
+## Important Functions
+
+(1) Function to return base at reference given chromosome and position
+(2) Function to separate reads based on gene (assuming TSS data contains this info stored in array)
