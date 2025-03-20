@@ -34,33 +34,26 @@ def reverse_complement(seq):
     complement = {'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C'}
     return ''.join(complement[n] for n in seq)
 
-def generate_palindromes(n):
+def generate_palindromes(n, maximum):
     '''
     Generate the palindrome sequences for cap1 and cap2 structures.
 
     Input:
         n (int): 3 for cap2, 2 for cap1
+        maximum (int): 3 for cap2, 1 for cap1
     Output:
         palindromes (set): list of palindrome sequences for cap1 or cap2
     '''
-    nucleotides = ['A', 'T', 'C', 'G']
-    palindromes = set()
-    for n1 in nucleotides:
-        for n2 in nucleotides:
-            if n == 3:
-                for n3 in nucleotides:
-                    triplet = n1 + n2 + n3
-                    reverse_triplet = n3 + n2 + n1
-                    palindrome = triplet + reverse_complement(reverse_triplet)
-                    if (n1 != n2 or n2 != n3 or n3 != n1):
-                        palindromes.add(palindrome)
-            if n == 2:
-                doublet = n1 + n2
-                reverse_doublet = n2 + n1
-                palindrome = doublet + reverse_complement(reverse_doublet)
-                if n1 != n2:
-                    palindromes.add(palindrome)
-    return palindromes
+    if n == 1:
+        return ['AT', 'GC', 'TA', 'CG']
+    else:
+        palindromes = set()
+        for x in ['A', 'G', 'T', 'C']:
+            for y in generate_pal(n-1, maximum):
+                candidate = x + y + reverse_complement(x)
+                if len(set(candidate[:maximum])) > 1:  
+                    palindromes.add(candidate)  
+        return palindromes
     
 palindromes_cap2 = generate_palindromes(3)
 palindromes_cap1 = generate_palindromes(2)
