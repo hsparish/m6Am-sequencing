@@ -24,7 +24,7 @@
 ### Aligning reads
 (5) Use Hisat-3n to align reads to reference sequence
 
-    Command used: hisat-3n -x hg38 -f -U /scratch/midway2/hparish/Batch-Files/read1_cut.fasta -S cap1_m6am_test.sam --time --base-change A,G --no-spliced-alignment --no-softclip --norc --no-unal --add-chrname --rna-strandness F
+    Command used: hisat-3n -x hg38 -f -U /scratch/midway2/hparish/Batch-Files/read1_cut.fasta -S cap1_m6am_test.sam --time --base-change A,G --no-spliced-alignment --no-softclip --norc --unique-only --add-chrname --rna-strandness F
 
 
 ### Filtering reads
